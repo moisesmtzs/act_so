@@ -65,7 +65,7 @@ bool MainWindow::operationValid()
     if (symbol == 3 or symbol == 4){
         if (ui->number2SP->value() == 0){
             QMessageBox message;
-            message.setText("Error, no se puede dividir entre 0.");
+            message.setText("Error, no puede dividirse entre 0.");
             message.setIcon(QMessageBox::Critical);
             message.exec();
             return false;
@@ -177,7 +177,7 @@ void MainWindow::runProcess()
     ui->finishedTB->setItem(rowsFinished,0,new QTableWidgetItem(QString::number(p.getId())));
     ui->finishedTB->setItem(rowsFinished,1,new QTableWidgetItem(QString(p.getOperacion().c_str())));
     ui->finishedTB->setItem(rowsFinished,2,new QTableWidgetItem(QString::number(p.getResultadoOperacion())));
-    ui->finishedTB->setItem(rowsFinished,3,new QTableWidgetItem(QString::number(currentLot)));
+    ui->finishedTB->setItem(rowsFinished,3,new QTableWidgetItem(QString::number(currentLot+1)));
     lots[0].erase(lots[0].begin());
     ui->processRuningTB->clearContents();
 

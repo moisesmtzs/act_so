@@ -33,7 +33,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(85, 85, 255);</string>
+background-color: rgb(135, 135, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_4">
@@ -183,7 +183,7 @@ background-color: rgb(191, 191, 191);
 border-radius: 8px;</string>
               </property>
               <property name="text">
-               <string>ACEPTAR</string>
+               <string>✓</string>
               </property>
              </widget>
             </item>
@@ -453,7 +453,7 @@ color: rgb(0, 0, 0);</string>
              </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
+               <width>35</width>
                <height>25</height>
               </size>
              </property>
@@ -468,7 +468,7 @@ background-color: rgb(191, 191, 191);
 border-radius: 8px;</string>
              </property>
              <property name="text">
-              <string>AGREGAR</string>
+              <string>Ok</string>
              </property>
             </widget>
            </item>
@@ -507,12 +507,12 @@ border-radius: 8px;</string>
         </size>
        </property>
        <layout class="QGridLayout" name="gridLayout_8">
-        <item row="2" column="1">
+        <item row="2" column="0">
          <widget class="QGroupBox" name="processRuningGB">
           <property name="maximumSize">
            <size>
             <width>255</width>
-            <height>221</height>
+            <height>285</height>
            </size>
           </property>
           <property name="font">
@@ -565,22 +565,22 @@ color: black;
              </row>
              <row>
               <property name="text">
-               <string>OPE</string>
+               <string>Oper</string>
               </property>
              </row>
              <row>
               <property name="text">
-               <string>TME</string>
+               <string>T.Est</string>
               </property>
              </row>
              <row>
               <property name="text">
-               <string>TT</string>
+               <string>T.Trans</string>
               </property>
              </row>
              <row>
               <property name="text">
-               <string>TR</string>
+               <string>T.Res</string>
               </property>
              </row>
              <column>
@@ -593,69 +593,86 @@ color: black;
           </layout>
          </widget>
         </item>
-        <item row="2" column="2">
-         <widget class="QGroupBox" name="finishedGB">
-          <property name="maximumSize">
-           <size>
-            <width>430</width>
-            <height>16777215</height>
-           </size>
-          </property>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="globalCountLB">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Tiempo transcurrido: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="globalCountLCD">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="startRunPB">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>10</pointsize>
             <bold>true</bold>
            </font>
           </property>
-          <property name="title">
-           <string>Procesos Terminados</string>
+          <property name="styleSheet">
+           <string notr="true">color: black;
+background-color: white;
+border-radius: 8px;</string>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="text">
+           <string>Comenzar</string>
           </property>
-          <layout class="QGridLayout" name="gridLayout_7">
-           <item row="0" column="0">
-            <widget class="QTableWidget" name="finishedTB">
-             <property name="styleSheet">
-              <string notr="true">background-color: white;
-color: black;</string>
-             </property>
-             <property name="editTriggers">
-              <set>QAbstractItemView::NoEditTriggers</set>
-             </property>
-             <attribute name="verticalHeaderVisible">
-              <bool>false</bool>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>ID</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>OPE</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>RL</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>NL</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-          </layout>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="pendientLotsLB">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>No. Lotes pendientes: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="pendientLotsLCD">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="mode">
+             <enum>QLCDNumber::Dec</enum>
+            </property>
+            <property name="segmentStyle">
+             <enum>QLCDNumber::Flat</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
          <widget class="QGroupBox" name="lotWorkingGB">
           <property name="maximumSize">
            <size>
-            <width>255</width>
+            <width>270</width>
             <height>221</height>
            </size>
           </property>
@@ -697,7 +714,7 @@ color: black;</string>
              </column>
              <column>
               <property name="text">
-               <string>TME</string>
+               <string>T.Est</string>
               </property>
              </column>
             </widget>
@@ -705,79 +722,62 @@ color: black;</string>
           </layout>
          </widget>
         </item>
-        <item row="0" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QLabel" name="pendientLotsLB">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>No. Lotes pendientes: </string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLCDNumber" name="pendientLotsLCD">
-            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <property name="mode">
-             <enum>QLCDNumber::Dec</enum>
-            </property>
-            <property name="segmentStyle">
-             <enum>QLCDNumber::Flat</enum>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="0" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QLabel" name="globalCountLB">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Tiempo transcurrido: </string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLCDNumber" name="globalCountLCD">
-            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="3" column="0">
-         <widget class="QPushButton" name="startRunPB">
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="finishedGB">
+          <property name="maximumSize">
+           <size>
+            <width>525</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
             <bold>true</bold>
            </font>
           </property>
-          <property name="styleSheet">
-           <string notr="true">color: black;
-background-color: white;
-border-radius: 8px;</string>
+          <property name="title">
+           <string>Procesos Terminados</string>
           </property>
-          <property name="text">
-           <string>Comenzar</string>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QTableWidget" name="finishedTB">
+             <property name="styleSheet">
+              <string notr="true">background-color: white;
+color: black;</string>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Oper</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Res</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>N.Lote</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
