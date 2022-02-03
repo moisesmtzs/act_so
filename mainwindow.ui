@@ -222,7 +222,7 @@ border-radius: 8px;</string>
                 </font>
                </property>
                <property name="text">
-                <string>Nombre:</string>
+                <string>Nombre</string>
                </property>
               </widget>
              </item>
@@ -258,7 +258,7 @@ color: rgb(0, 0, 0);</string>
                 </font>
                </property>
                <property name="text">
-                <string>Expresión:</string>
+                <string>Operación</string>
                </property>
               </widget>
              </item>
@@ -369,7 +369,7 @@ color: rgb(0, 0, 0);</string>
                 </font>
                </property>
                <property name="text">
-                <string>ID:</string>
+                <string>ID</string>
                </property>
               </widget>
              </item>
@@ -397,7 +397,7 @@ color: rgb(0, 0, 0);</string>
                   </font>
                  </property>
                  <property name="text">
-                  <string>Tiempo estimado:</string>
+                  <string>Tiempo estimado</string>
                  </property>
                 </widget>
                </item>
